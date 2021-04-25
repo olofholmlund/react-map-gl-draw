@@ -24,13 +24,13 @@
     "postpublish": "npm run styleguide:build && npm run styleguide:deploy"
   },
   "peerDependencies": {
-    "@mapbox/mapbox-gl-draw": "^1.1.1",
+    "mapbox-gl-draw-mobile-fix": "^1.2.2",
     "@urbica/react-map-gl": "^1.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/preset-flow": "^7.10.1",
-    "@mapbox/mapbox-gl-draw": "^1.2.0",
+    "mapbox-gl-draw-mobile-fix": "^1.2.2",
     "@urbica/react-map-gl": "^1.14.2",
     "eslint-config-urbica": "^3.0.0",
     "flow-bin": "^0.97",

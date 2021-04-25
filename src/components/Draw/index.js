@@ -2,8 +2,8 @@
 
 import * as React from 'react';
 import { MapContext } from '@urbica/react-map-gl';
-import MapboxDraw from '@mapbox/mapbox-gl-draw';
-import theme from '@mapbox/mapbox-gl-draw/src/lib/theme';
+import MapboxDraw from 'mapbox-gl-draw-mobile-fix';
+import theme from 'mapbox-gl-draw-mobile-fix/src/lib/theme';
 
 const modes = MapboxDraw.modes;
 
@@ -206,7 +206,13 @@ export type Props = {
    * Fired when features are changed. (`draw.create`, `draw.delete`,
    * `draw.combine`, `draw.uncombine`, `draw.update`).
    */
-  onChange?: Function
+  onChange?: Function,
+
+  /**
+   * Names of the modes which should pass touch events to the underlying map.
+   * Default is the "simple_select" mode. Pass an empty array to disable.
+   */
+  passthroughTouchModeNames?: Array<string>,
 };
 
 class Draw extends React.PureComponent<Props> {
@@ -239,7 +245,8 @@ class Draw extends React.PureComponent<Props> {
     onDrawModeChange: null,
     onDrawRender: null,
     onDrawActionable: null,
-    onChange: null
+    onChange: null,
+    passthroughTouchModeNames: ['simple_select'],
   };
 
   componentDidMount() {
@@ -296,7 +303,8 @@ class Draw extends React.PureComponent<Props> {
         ? this.props.modes(this.constructor.defaultProps.modes)
         : this.props.modes,
       defaultMode: this.props.mode,
-      userProperties: this.props.userProperties
+      userProperties: this.props.userProperties,
+      passthroughTouchModeNames: this.props.passthroughTouchModeNames,
     });
 
     map.addControl(this._draw, this.props.position);
