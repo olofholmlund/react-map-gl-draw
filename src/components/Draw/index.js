@@ -214,6 +214,7 @@ export type Props = {
    */
   passthroughTouchModeNames?: Array<string>,
 
+  map: Object,
   snap?: Boolean,
   snapOptions?: Object
 };
@@ -286,7 +287,7 @@ class Draw extends React.PureComponent<Props> {
 
   _createControl = () => {
     // $FlowFixMe
-    const map = this._map;
+    const map = this.props.map;
     // $FlowFixMe
     this._draw = new MapboxDraw({
       keybindings: this.props.keybindings,
@@ -310,6 +311,8 @@ class Draw extends React.PureComponent<Props> {
       defaultMode: this.props.mode,
       userProperties: this.props.userProperties,
       passthroughTouchModeNames: this.props.passthroughTouchModeNames,
+      snap: this.props.snap,
+      snapOptions: this.props.snapOptions
     });
 
     map.addControl(this._draw, this.props.position);
@@ -336,7 +339,7 @@ class Draw extends React.PureComponent<Props> {
 
   _removeControl = () => {
     // $FlowFixMe
-    const map = this._map;
+    const map = this.props.map;
 
     if (!map || !map.getStyle()) {
       return;
