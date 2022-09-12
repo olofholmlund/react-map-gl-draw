@@ -213,6 +213,9 @@ export type Props = {
    * Default is the "simple_select" mode. Pass an empty array to disable.
    */
   passthroughTouchModeNames?: Array<string>,
+
+  snap?: Boolean,
+  snapOptions?: Object
 };
 
 class Draw extends React.PureComponent<Props> {
@@ -247,6 +250,8 @@ class Draw extends React.PureComponent<Props> {
     onDrawActionable: null,
     onChange: null,
     passthroughTouchModeNames: ['simple_select'],
+    snap: false,
+    snapOptions: {}
   };
 
   componentDidMount() {
