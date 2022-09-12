@@ -310,6 +310,8 @@ class Draw extends React.PureComponent<Props> {
       defaultMode: this.props.mode,
       userProperties: this.props.userProperties,
       passthroughTouchModeNames: this.props.passthroughTouchModeNames,
+      snap: this.props.snap,
+      snapOptions: this.props.snapOptions
     });
 
     map.addControl(this._draw, this.props.position);
