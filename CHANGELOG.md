@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.8](https://github.com/urbica/react-map-gl-draw/compare/v0.3.7...v0.3.8) (2022-09-12)
+
+
+### Bug Fixes
+
+* Pass snapping props to mapbox draw ([b0fd998](https://github.com/urbica/react-map-gl-draw/commit/b0fd998356e3f001402ec79c19767c0e5a08b89a))
+
 ### 0.3.7 (2022-09-12)
 
 
