@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.9](https://github.com/urbica/react-map-gl-draw/compare/v0.3.8...v0.3.9) (2022-09-27)
+
+
+### Bug Fixes
+
+* change draw mode when mode options change ([87fe374](https://github.com/urbica/react-map-gl-draw/commit/87fe374e9eab0773a3bb2146d7bbe66d7bbd2f46))
+
 ### [0.3.8](https://github.com/urbica/react-map-gl-draw/compare/v0.3.7...v0.3.8) (2022-09-12)
 
 
