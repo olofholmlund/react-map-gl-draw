@@ -1,9 +1,10 @@
 // @flow
 
 import * as React from 'react';
-import { MapContext } from '@urbica/react-map-gl';
+import {MapContext} from '@urbica/react-map-gl';
 import MapboxDraw from 'mapbox-gl-draw-mobile-fix';
 import theme from 'mapbox-gl-draw-mobile-fix/src/lib/theme';
+import _isEqual from 'lodash.isequal';
 
 const modes = MapboxDraw.modes;
 
@@ -269,7 +270,8 @@ class Draw extends React.PureComponent<Props> {
       this._createControl();
     }
 
-    if (prevProps.mode !== this.props.mode) {
+    if (prevProps.mode !== this.props.mode ||
+        !_isEqual(prevProps.modeOptions !== this.props.modeOptions)) {
       // $FlowFixMe
       this._draw.changeMode(this.props.mode, this.props.modeOptions);
     }
@@ -364,7 +366,7 @@ class Draw extends React.PureComponent<Props> {
   }
 
   _onChange = () => {
-    const { onChange } = this.props;
+    const {onChange} = this.props;
 
     if (onChange) {
       // $FlowFixMe

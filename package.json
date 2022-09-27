@@ -24,19 +24,19 @@
     "postpublish": "npm run styleguide:build && npm run styleguide:deploy"
   },
   "peerDependencies": {
-    "mapbox-gl-draw-mobile-fix": "^1.2.2",
-    "@urbica/react-map-gl": "^1.0.0"
+    "@urbica/react-map-gl": "^1.0.0",
+    "mapbox-gl-draw-mobile-fix": "^1.2.2"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/preset-flow": "^7.10.1",
-    "mapbox-gl-draw-mobile-fix": "^1.2.2",
     "@urbica/react-map-gl": "^1.14.4",
     "eslint-config-urbica": "^3.0.0",
     "flow-bin": "^0.97",
     "gh-pages": "^3.0.0",
     "git-cz": "^4.6.2",
     "mapbox-gl": "^2.7.0",
+    "mapbox-gl-draw-mobile-fix": "^1.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
@@ -46,5 +46,8 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "standard-version": "^8.0.0"
+  },
+  "dependencies": {
+    "lodash.isequal": "^4.5.0"
   }
 }
