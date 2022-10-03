@@ -275,6 +275,10 @@ class Draw extends React.PureComponent<Props> {
       // $FlowFixMe
       this._draw.changeMode(this.props.mode, this.props.modeOptions);
     }
+
+    if (prevProps.snap !== this.props.snap) {
+      this._draw.options.snap = this.props.snap;
+    }
   }
 
   componentWillUnmount(): void {
