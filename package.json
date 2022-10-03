@@ -1,6 +1,6 @@
 {
   "name": "react-map-gl-draw-mobile-fix-snap-props",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "description": "React Component for Mapbox GL Draw",
   "repository": {
     "type": "git",
